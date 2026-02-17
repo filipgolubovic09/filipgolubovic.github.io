@@ -43,15 +43,16 @@
       margin-bottom: 1rem;
     }
     .hero-img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--accent);
-      box-shadow: 0 0 40px rgba(255,98,0,0.4);
-      margin: 2rem auto;
-      display: block;
-    }
+  width: 100%;                  /* Fills the header area horizontally */
+  max-width: 700px;             /* Prevents it from getting too massive on wide screens; adjust if needed */
+  height: auto;                 /* Preserves the original aspect ratio—no forced square */
+  border-radius: 16px;          /* Soft corners for modern look (change to 0 for sharp rectangle) */
+  object-fit: contain;          /* Shows the FULL image without cropping edges (best for action shots) */
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 40px rgba(255,98,0,0.4);
+  margin: 2rem auto;
+  display: block;
+}
     section {
       max-width: 1000px;
       margin: 4rem auto;
@@ -121,8 +122,8 @@
       font-size: 0.9rem;
     }
     @media (max-width: 768px) {
-      h1 { font-size: 4rem; }
-      .hero-img { width: 220px; height: 220px; }
+  .hero-img { width: 100%; max-width: 400px; height: auto; }
+}
       iframe { height: 300px; }
     }
   </style>
@@ -139,7 +140,7 @@
   <a href="#recruiting" style="color: var(--accent); margin: 0 1rem; text-decoration: none;">Recruiting</a>
 </nav>
     <img src="https://raw.githubusercontent.com/filipgolubovic09/filipgolubovic.github.io/main/images/action_shot.jpg"
-     alt="Filip Golubovic dribbling in game action"
+     alt="Filip Golubovic driving to the basket in game action for Dynamic Sr. Prep"
      class="hero-img">
   </header>
 
@@ -213,6 +214,7 @@
 </body>
 
 </html>
+
 
 
 
